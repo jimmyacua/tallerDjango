@@ -1,0 +1,37 @@
+Instalando 
+
+Instalando un entorno virtual (virtualenv)
+
+    $ sudo apt-get install python-virtualenv
+    $ mkdir environment
+    $ mkdir project
+    $ cd environment
+    $ virtualenv -p python3 fsd
+
+Creando el proyecto 
+
+    $ cd ../project
+    $ django-admin.py startproject fsd
+    $ cd fsd
+
+Creando un app 
+
+    $ python manage.py startapp university
+    $ cd university
+
+Creando un archivo para manejar las dependencias (requirement.txt) y dentro de él poner
+
+    django
+    Pillow
+    djangoajax
+
+Creando los modelos de la base de datos
+
+    $ cd ..
+	$ python manage.py makemigrations university
+    $ python manage.py migrate
+    
+Creo un usuario administrador (método en des-uso)
+
+    $ python manager.py createsuperuser
+    
